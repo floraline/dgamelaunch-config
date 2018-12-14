@@ -153,6 +153,31 @@ games = OrderedDict([
 #        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
 #        socket_path = "%%CHROOT_WEBDIR%%/sockets",
 #        options = ["-tutorial"])),
+    ("dcss-0.18", dict(
+        name = "Play 0.18",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        separator = "<br>",
+        send_json_options = True,
+        pre_options  = [ "0.18" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-0.18/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-0.18/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-18/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets")),
+    ("spr-0.18", dict(
+        name = "Sprint",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        pre_options  = [ "0.18" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-0.18/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-0.18/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-18-sprint/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets",
+        options = ["-sprint"])),
 
     ("dcss-hellcrawl", dict(
         name = "hellcrawl",
@@ -186,12 +211,16 @@ dgl_status_file = "%%CHROOT_WEBDIR%%/run/status"
 
 # Set to None not to read milestones
 milestone_file = [
+    "%%CHROOT_CRAWL_GAMEDIR%%/saves/milestones",
+    "%%CHROOT_CRAWL_GAMEDIR%%/saves/milestones-tutorial",
+    "%%CHROOT_CRAWL_GAMEDIR%%/saves/milestones-sprint",
     "%%CHROOT_CRAWL_BASEDIR%%/crawl-0.22/saves/milestones",
     "%%CHROOT_CRAWL_BASEDIR%%/crawl-0.22/saves/milestones-tutorial",
     "%%CHROOT_CRAWL_BASEDIR%%/crawl-0.22/saves/milestones-sprint",
-    "%%CHROOT_CRAWL_GAMEDIR%%/saves/milestones",
-    "%%CHROOT_CRAWL_GAMEDIR%%/saves/milestones-tutorial",
-    "%%CHROOT_CRAWL_GAMEDIR%%/saves/milestones-sprint"
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-0.21/saves/milestones",
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-0.21/saves/milestones-sprint"
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-0.18/saves/milestones",
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-0.18/saves/milestones-sprint"
 ]
 
 status_file_update_rate = 5

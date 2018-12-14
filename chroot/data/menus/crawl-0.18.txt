@@ -7,17 +7,17 @@ Crawl information:  http://crawl.develz.org/
 ------------------------------------------------------------------------------
 
 Logged in as: $USERNAME
-W) Watch games in progress
 
-T) Dungeon Crawl Stone Soup Trunk
-R) Dungeon Crawl Stone Soup Stable Release (0.22)
+Game selected: Dungeon Crawl Stone Soup 0.18
 
-1) 0.21 8) 0.18
+P)lay Crawl    S)print    T)utorial
 
-X) Experimental
+o) Edit options    O) with Virus
+m) Edit macros     M) with Virus
+v) View changelog  V) with Virus
 
-c) Change password  e) Change email address
+A)dvanced options
 
-Q)uit or P)lay or S)print in Crawl 0.22 now
+q) Return to main menu
 
 => 
