@@ -1,10 +1,10 @@
 #!/bin/bash
 
-VERSION=${1:-0.17}
+VERSION=${1:-0.22}
 
 # Quoting for =~ changed from bash 3.0 to 3.2; using a variable for the
 # regexp works with both.
-VERS_RE='^[0-9]+.[0-9]+$'
+VERS_RE='^[0-9]+.[0-9]+$|^new-nemelex$|^hellcrawl$'
 if [[ ! $VERSION =~ $VERS_RE ]]; then
     echo "Bad crawl version $VERSION"
     exit 1
@@ -31,7 +31,7 @@ TODAY="$(dgl-today)"
 REVISION="$2"
 ./update-public-repository.sh $BRANCH "$REVISION"
 
-REVISION="$(git-do rev-parse HEAD | cut -c 1-7)"
+REVISION="$(git-do rev-parse HEAD | cut -c 1-10)"
 REVISION_FULL="$(git-do describe --long HEAD)"
 VER_STR="$(git-do describe HEAD)"
 VER_STR_OLD="$(($CRAWL_BINARY_PATH/$GAME -version 2>/dev/null || true) | sed -ne 's/Crawl version //p')"

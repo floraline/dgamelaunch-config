@@ -1,8 +1,8 @@
-Crawl server (North America) hosted and maintained by Neil Moore (|amethyst).
+Crawl server (New York) hosted and maintained by floraline.
 ------------------------------------------------------------------------------
-Webtiles:           https://crawl.s-z.org/
+Webtiles:           https://crawl.kelbi.org/
 Crawl information:  http://crawl.develz.org/
-Rebuild:            http://dobrazupa.org/rebuild/
+Rebuild:            http://crawl.kelbi.org/rebuild/
 ------------------------------------------------------------------------------
 ** Games on this server are recorded for in-progress viewing and playback! **
 ------------------------------------------------------------------------------
@@ -11,12 +11,14 @@ Logged in as: $USERNAME (admin)
 W) Watch games in progress
 
 T) Dungeon Crawl Stone Soup Trunk
-7) Dungeon Crawl Stone Soup 0.17 (beta)
-6) 0.16   5) 0.15   4) 0.14   3) 0.13   2) 0.12   1) 0.11   0) 0.10
+R) Dungeon Crawl Stone Soup Stable Release (0.22)
 
-R) robotfindskitten  A) Air Traffic Control  B) Boggle
+1) 0.21
+
+X) Experimental
+
 c) Change password  e) Change email address
 
-Q)uit or P)lay or S)print in Crawl 0.17 now
+Q)uit or P)lay or S)print in Crawl 0.22 now
 
 => 

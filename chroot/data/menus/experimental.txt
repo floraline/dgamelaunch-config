@@ -1,22 +1,21 @@
-Crawl server (North America) hosted and maintained by Neil Moore (|amethyst).
+Crawl server (New York) hosted and maintained by floraline.
 ------------------------------------------------------------------------------
-Webtiles:           https://crawl.s-z.org/
+Webtiles:           https://crawl.kelbi.org/
 Crawl information:  http://crawl.develz.org/
 ------------------------------------------------------------------------------
 ** Games on this server are recorded for in-progress viewing and playback! **
 ------------------------------------------------------------------------------
 Logged in as: $USERNAME
 
-Game selected: Dungeon Crawl Stone Soup experimental branches
-
 WARNING: Experimental branches have limited save compatibility! Updates to the
 branches may cause the loss of existing games, and branches may be removed
 without warning: don't get too attached to your character. Thanks for helping
 us evaluate potential new features!
 
-C)hunkless
-I)ashol
-S)mith God (updated)
+H) Hellcrawl
+N) New-Nemelex
+
+A) Advanced options
 
 q) Return to trunk menu
 => 

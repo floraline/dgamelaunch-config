@@ -1,6 +1,6 @@
-Crawl server (North America) hosted and maintained by Neil Moore (|amethyst).
+Crawl server (New York) hosted and maintained by floraline.
 ------------------------------------------------------------------------------
-Webtiles:           https://crawl.s-z.org/
+Webtiles:           https://crawl.kelbi.org/
 Crawl information:  http://crawl.develz.org/
 ------------------------------------------------------------------------------
 ** Games on this server are recorded for in-progress viewing and playback! **
@@ -8,7 +8,7 @@ Crawl information:  http://crawl.develz.org/
 
 Logged in as: $USERNAME
 
-Game selected: Dungeon Crawl Stone Soup 0.16
+Game selected: Dungeon Crawl Stone Soup 0.22
 
 P)lay Crawl    S)print    T)utorial
 
