@@ -81,6 +81,10 @@ export SGV_MINOR="0"
 say-do sudo -H $DGL_CHROOT/sbin/install-trunk.sh "$REVISION" \
     "$REVISION_FULL" "$SGV_MAJOR" "$SGV_MINOR"
 
+echo "Copying docs to public html..."
+rm -r /var/www/crawl/docs/*
+cp -r $CRAWL_REPO/crawl-ref/docs/ /var/www/crawl
+
 announce "Unstable branch on $DGL_SERVER updated to: ${REVISION_FULL} (${SGV_MAJOR})"
 
 echo "All done."
