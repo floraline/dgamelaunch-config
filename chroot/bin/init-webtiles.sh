@@ -15,5 +15,10 @@ ifnxcp %%CHROOT_DGLDIR%%/data/crawl-git.macro %%CHROOT_RCFILESDIR%%/crawl-0.21/"
 ifnxcp %%CHROOT_DGLDIR%%/data/crawl-0.18-settings/init.txt %%CHROOT_RCFILESDIR%%/crawl-0.18/"$NAME".rc
 ifnxcp %%CHROOT_DGLDIR%%/data/crawl-git.macro %%CHROOT_RCFILESDIR%%/crawl-0.18/"$NAME".macro
 
+ifnxcp %%CHROOT_DGLDIR%%/data/crawl-git-settings/init.txt %%CHROOT_RCFILESDIR%%/crawl-hellcrawl/"$NAME".rc
+ifnxcp %%CHROOT_DGLDIR%%/data/crawl-git.macro %%CHROOT_RCFILESDIR%%/crawl-hellcrawl/"$NAME".macro
+ifnxcp %%CHROOT_DGLDIR%%/data/crawl-git-settings/init.txt %%CHROOT_RCFILESDIR%%/crawl-bcrawl/"$NAME".rc
+ifnxcp %%CHROOT_DGLDIR%%/data/crawl-git.macro %%CHROOT_RCFILESDIR%%/crawl-bcrawl/"$NAME".macro
+
 mkdir -p %%CHROOT_MORGUEDIR%%/"$NAME"
 mkdir -p %%CHROOT_TTYRECDIR%%/"$NAME"

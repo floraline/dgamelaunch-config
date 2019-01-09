@@ -5,19 +5,14 @@ Crawl information:  http://crawl.develz.org/
 ------------------------------------------------------------------------------
 ** Games on this server are recorded for in-progress viewing and playback! **
 ------------------------------------------------------------------------------
-
 Logged in as: $USERNAME
-W) Watch games in progress
 
-T) Dungeon Crawl Stone Soup Trunk
-R) Dungeon Crawl Stone Soup Stable Release (0.22)
+WARNING: Forks are not developed or tested by the Crawl development team.
+Updates to forks may cause the loss of existing games.
 
-1) 0.21 8) 0.18
+H) Hellcrawl
+B) bcrawl
 
-X) Experimental  F) Fork
 
-c) Change password  e) Change email address
-
-Q)uit or P)lay or S)print in Crawl 0.22 now
-
+q) Return to trunk menu
 => 

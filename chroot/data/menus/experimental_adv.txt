@@ -12,8 +12,7 @@ Advanced options
 Select the experimental version you wish to backup
 (for bug reports and debugging)
 
-H) Hellcrawl
-N) New-Nemelex
+
 
 q) Return to previous menu
 

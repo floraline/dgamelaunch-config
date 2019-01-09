@@ -15,7 +15,7 @@ R) Dungeon Crawl Stone Soup Stable Release (0.22)
 
 1) 0.21 8) 0.18
 
-X) Experimental
+X) Experimental  F) Fork
 
 c) Change password  e) Change email address
 
