@@ -56,12 +56,13 @@ do
     then
 	OUR_GAME_HASH="$(echo ${SAVE_FOUND} | sed "s|${PREFIX}/${BINARY_MAIN_NAME}-\(.*\)/saves/${CHAR_NAME}.*|\1|")"
 	OUR_GAME_SV="$(echo select major,minor from versions where hash=\"${OUR_GAME_HASH}\"\; | sqlite3 -separator \. ${VERSIONS_DB})"
+	OUR_GAME_V="$(echo select substr\(description,1,4\) from versions where hash=\"${OUR_GAME_HASH}\"\; | sqlite3 ${VERSIONS_DB})"
 	echo -n "Char \"${CHAR_NAME}\" in ${OUR_GAME_HASH} (${OUR_GAME_SV}). "
         
 	if test "${OUR_GAME_HASH}" != "${LATEST_GAME_HASH}"
 	then
 	    OUR_SGV_MAJOR="$(echo "select major from versions where hash=\"${OUR_GAME_HASH}\";" | sqlite3 ${VERSIONS_DB})"
-	    POSSIBLE_GAME_HASH="$(echo "select hash from versions where major=${OUR_SGV_MAJOR} order by time desc limit 1;" | sqlite3 ${VERSIONS_DB})"
+	    POSSIBLE_GAME_HASH="$(echo "select hash from versions where major=${OUR_SGV_MAJOR} and substr(description,1,4)=\"${OUR_GAME_V}\" order by time desc limit 1;" | sqlite3 ${VERSIONS_DB})"
             
 	    if test "${OUR_GAME_HASH}" != "${POSSIBLE_GAME_HASH}"
 	    then
