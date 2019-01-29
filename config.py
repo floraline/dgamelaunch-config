@@ -7,7 +7,6 @@ except ImportError:
 dgl_mode = True
 
 bind_nonsecure = False # Set to false to only use SSL
-#bind_address = "104.131.30.97"
 bind_address = "127.0.0.1"
 bind_port = 8080
 
@@ -141,18 +140,6 @@ games = OrderedDict([
         ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
         socket_path = "%%CHROOT_WEBDIR%%/sockets",
         options = ["-sprint"])),
-#    ("tut-git", dict(
-#        name = "Tutorial",
-#        crawl_binary = "/bin/crawl-git-launcher.sh",
-#        send_json_options = True,
-#        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-git/",
-#        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-git/",
-#        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
-#        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
-#        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-git-tut/",
-#        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
-#        socket_path = "%%CHROOT_WEBDIR%%/sockets",
-#        options = ["-tutorial"])),
 
     ("dcss-0.21", dict(
         name = "Play 0.21",
@@ -179,18 +166,6 @@ games = OrderedDict([
         ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
         socket_path = "%%CHROOT_WEBDIR%%/sockets",
         options = ["-sprint"])),
-#    ("tut-0.21", dict(
-#        name = "Tutorial",
-#        crawl_binary = "/bin/crawl-stable-launcher.sh",
-#        pre_options  = [ "0.21" ],
-#        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-0.21/",
-#        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-0.21/",
-#        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
-#        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
-#        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-21-tut/",
-#        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
-#        socket_path = "%%CHROOT_WEBDIR%%/sockets",
-#        options = ["-tutorial"])),
     ("dcss-0.18", dict(
         name = "Play 0.18",
         crawl_binary = "/bin/crawl-stable-launcher.sh",
