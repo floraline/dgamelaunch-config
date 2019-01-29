@@ -4,8 +4,11 @@ VERSION=${1:-0.22}
 
 # Quoting for =~ changed from bash 3.0 to 3.2; using a variable for the
 # regexp works with both.
-VERS_RE='^[0-9]+.[0-9]+$|^hellcrawl$|^bcrawl$'
-if [[ ! $VERSION =~ $VERS_RE ]]; then
+# put experimentals in VERS_RE
+VERS_RE='^[0-9]+.[0-9]+$|^faster-clouds$'
+FORK_RE='^hellcrawl$|^bcrawl$'
+#if [[ ! $VERSION =~ $VERS_RE ]]; then
+if ! { [[ $VERSION =~ $VERS_RE ]] || [[ $VERSION =~ $FORK_RE ]]; }; then
     echo "Bad crawl version $VERSION"
     exit 1
 fi
@@ -81,12 +84,12 @@ prompt "install ${GAME} (${REVISION})"
 say-do sudo -H $DGL_CHROOT/sbin/install-stable.sh "$VERSION"
 
 if [[ $VERSION = [0-9]* ]]; then
-    SUPER_VER="Stable"
+    announce "Stable ($VERSION) branch on $DGL_SERVER updated to: ${REVISION_FULL}"
+elif [[ $VERSION =~ $FORK_RE ]]; then
+    announce "Fork ($VERSION) on $DGL_SERVER updated to: ${REVISION_FULL}"
 else
-    SUPER_VER="Experimental"
+    announce "Experimental ($VERSION) branch on $DGL_SERVER updated to: ${REVISION_FULL}"
 fi
-
-announce "$SUPER_VER ($VERSION) branch on $DGL_SERVER updated to: ${REVISION_FULL}"
 
 echo "All done."
 echo
