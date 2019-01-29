@@ -12,11 +12,10 @@ W) Watch games in progress
 
 T) Dungeon Crawl Stone Soup Trunk
 R) Dungeon Crawl Stone Soup Stable Release (0.22)
-
+B) Dungeon Crawl Stone Soup Beta Release (0.23)
 1) 0.21 8) 0.18
 
 X) Experimental  F) Fork
-
 c) Change password  e) Change email address
 
 Q)uit or P)lay or S)print in Crawl 0.22 now

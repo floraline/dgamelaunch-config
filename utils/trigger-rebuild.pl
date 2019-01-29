@@ -151,10 +151,10 @@ sub main() {
   my $ver = param('v');
 
   if (not $ver) {
-    do_prompt 'trunk', '0.22', 'hellcrawl', 'bcrawl';
+    do_prompt 'trunk', '0.23', '0.22', 'hellcrawl', 'bcrawl';
   } elsif ($ver eq 'trunk') {
     do_update 'trunk';
-  } elsif ($ver =~ /^0.22$|^hellcrawl$|^bcrawl$/) {
+  } elsif ($ver =~ /^0.23$|^0.22$|^hellcrawl$|^bcrawl$/) {
     do_update 'stable', $ver;
   } else {
     do_fail "Unknown version " . escapeHTML($ver);
