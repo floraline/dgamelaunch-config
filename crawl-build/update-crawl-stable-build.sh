@@ -5,8 +5,8 @@ VERSION=${1:-0.23}
 # Quoting for =~ changed from bash 3.0 to 3.2; using a variable for the
 # regexp works with both.
 # put experimentals in VERS_RE
-VERS_RE='^[0-9]+.[0-9]+$|^faster-clouds$'
-FORK_RE='^hellcrawl$|^bcrawl$'
+VERS_RE='^[0-9]+.[0-9]+$|^two-state-vampire$'
+FORK_RE='^hellcrawl$|^bcrawl$|^bcadrencrawl$|^gooncrawl$|^stoatsoup$'
 #if [[ ! $VERSION =~ $VERS_RE ]]; then
 if ! { [[ $VERSION =~ $VERS_RE ]] || [[ $VERSION =~ $FORK_RE ]]; }; then
     echo "Bad crawl version $VERSION"

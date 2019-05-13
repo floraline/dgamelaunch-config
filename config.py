@@ -6,12 +6,12 @@ except ImportError:
 
 dgl_mode = True
 
-bind_nonsecure = False # Set to false to only use SSL
+bind_nonsecure = True # Set to false to only use SSL
 bind_address = "127.0.0.1"
-bind_port = 8080
+bind_port = 8000
 
 bind_pairs = (
-    ("127.0.0.1", 8080),
+    ("127.0.0.1", 8000),
 )
 
 logging_config = {
@@ -40,48 +40,11 @@ watch_socket_dirs = True
 # Game configs
 # %n in paths is replaced by the current username
 games = OrderedDict([
-    ("dcss-0.22", dict(
-        name = "Play 0.22",
-        crawl_binary = "/bin/crawl-stable-launcher.sh",
-        separator = "<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>latest version:</span>&nbsp;",
-        send_json_options = True,
-        pre_options  = [ "0.22" ],
-        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-0.22/",
-        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-0.22/",
-        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
-        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
-        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-22/",
-        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
-        socket_path = "%%CHROOT_WEBDIR%%/sockets")),
-    ("spr-0.22", dict(
-        name = "Sprint",
-        crawl_binary = "/bin/crawl-stable-launcher.sh",
-        pre_options  = [ "0.22" ],
-        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-0.22/",
-        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-0.22/",
-        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
-        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
-        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-22-sprint/",
-        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
-        socket_path = "%%CHROOT_WEBDIR%%/sockets",
-        options = ["-sprint"])),
-    ("tut-0.22", dict(
-        name = "Tutorial",
-        crawl_binary = "/bin/crawl-stable-launcher.sh",
-        pre_options  = [ "0.22" ],
-        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-0.22/",
-        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-0.22/",
-        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
-        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
-        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-22-tut/",
-        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
-        socket_path = "%%CHROOT_WEBDIR%%/sockets",
-        options = ["-tutorial"])),
 
     ("dcss-0.23", dict(
-        name = "Play the 0.23 beta",
+        name = "Play 0.23",
         crawl_binary = "/bin/crawl-stable-launcher.sh",
-	separator = "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>beta release:</span>&nbsp;",
+        separator = "<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>latest version:</span>&nbsp;",
         send_json_options = True,
         pre_options  = [ "0.23" ],
         rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-0.23/",
@@ -141,10 +104,35 @@ games = OrderedDict([
         socket_path = "%%CHROOT_WEBDIR%%/sockets",
         options = ["-sprint"])),
 
+    ("dcss-0.22", dict(
+        name = "Play 0.22",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        separator = "<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<details style='display:inline-block;'><summary style='cursor:pointer; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;'>Click to see older versions</summary>",
+        send_json_options = True,
+        pre_options  = [ "0.22" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-0.22/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-0.22/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-22/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets")),
+    ("spr-0.22", dict(
+        name = "Sprint",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        pre_options  = [ "0.22" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-0.22/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-0.22/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-22-sprint/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets",
+        options = ["-sprint"])),
     ("dcss-0.21", dict(
         name = "Play 0.21",
         crawl_binary = "/bin/crawl-stable-launcher.sh",
-        separator = "<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<details style='display:inline-block;'><summary style='cursor:pointer; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;'>Click to see older versions</summary>",
+        separator = "<br>",
         send_json_options = True,
         pre_options  = [ "0.21" ],
         rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-0.21/",
@@ -218,6 +206,45 @@ games = OrderedDict([
         inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-bcrawl/",
         ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
         socket_path = "%%CHROOT_WEBDIR%%/sockets")),
+    ("dcss-bcadrencrawl", dict(
+        name = "BcadrenCrawl",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        separator = "|",
+        send_json_options = True,
+        pre_options  = [ "bcadrencrawl" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-bcadrencrawl/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-bcadrencrawl/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-bcadrencrawl/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets")),
+    ("dcss-gooncrawl", dict(
+        name = "Gooncrawl",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        separator = "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
+        send_json_options = True,
+        pre_options  = [ "gooncrawl" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-gooncrawl/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-gooncrawl/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-gooncrawl/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets")),
+    ("dcss-stoatsoup", dict(
+        name = "StoatSoup",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        separator = "|",
+        send_json_options = True,
+        pre_options  = [ "stoatsoup" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-stoatsoup/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-stoatsoup/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-stoatsoup/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets")),
 #    ("dcss-new-nemelex", dict(
 #        name = "new-nemelex",
 #        crawl_binary = "/bin/crawl-stable-launcher.sh",
@@ -263,13 +290,13 @@ max_connections = 500
 # at the moment.
 init_player_program = "/bin/init-webtiles.sh"
 
-#ssl_options = None # No SSL
-ssl_options = {
-    "certfile": "/ckeys/kelbi.org/cert.crt",
-    "keyfile": "/ckeys/kelbi.org/privkey.key",
-    "ca_certs": "/ckeys/kelbi.org/chain.pem"
-#    "ca_certs": "/ckeys/kelbi.org/fullchain.pem"
-}
+ssl_options = None # No SSL
+#ssl_options = {
+#    "certfile": "/ckeys/kelbi.org/cert.crt",
+#    "keyfile": "/ckeys/kelbi.org/privkey.key",
+#    "ca_certs": "/ckeys/kelbi.org/chain.pem"
+#keep commented out    "ca_certs": "/ckeys/kelbi.org/fullchain.pem"
+#}
 ssl_address = "104.131.30.97"
 ssl_port = 8081
 
@@ -285,6 +312,7 @@ use_gzip = False
 # Seconds until stale HTTP connections are closed
 # This needs a patch currently not in mainline tornado.
 http_connection_timeout = None
+http_xheaders = True
 
 kill_timeout = 10 # Seconds until crawl is killed after HUP is sent
 

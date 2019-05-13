@@ -10,9 +10,10 @@ Logged in as: $USERNAME
 WARNING: Forks are not developed or tested by the Crawl development team.
 Updates to forks may cause the loss of existing games.
 
-H) Hellcrawl
+H) Hellcrawl	   S) StoatSoup
 B) bcrawl
-
+C) BcadrenCrawl
+G) Gooncrawl
 
 q) Return to trunk menu
 => 
