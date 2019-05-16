@@ -21,7 +21,7 @@ update-crawl-ref() {
     ( cd $REPO_DIR &&
         git checkout -f $BRANCH &&
         git fetch &&
-        git reset --hard ${u} &&
+        git reset --hard `git rev-parse --abbrev-ref --symbolic-full-name @{u}` &&
         git clean -xdf )
     if [[ -n "$REVISION" ]]; then
         say "Checking out requested revision: $REVISION"
