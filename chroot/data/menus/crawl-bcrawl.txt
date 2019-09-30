@@ -10,7 +10,7 @@ Logged in as: $USERNAME
 
 Game selected: bcrawl
 
-P)lay bcrawl
+P)lay bcrawl    d) Adventure mode
 
 o) Edit options
 m) Edit macros
