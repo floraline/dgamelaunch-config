@@ -10,13 +10,13 @@ Logged in as: $USERNAME
 W) Watch games in progress
 
 T) Dungeon Crawl Stone Soup Trunk
-R) Dungeon Crawl Stone Soup Stable Release (0.23)
+R) Dungeon Crawl Stone Soup Stable Release (0.24)
 
-1) 0.21 2) 0.22 8) 0.18
+1) 0.21 2) 0.22 3) 0.23 8) 0.18
 
 X) Experimental  F) Fork
 c) Change password  e) Change email address
 
-Q)uit or P)lay or S)print in Crawl 0.23 now
+Q)uit or P)lay or S)print in Crawl 0.24 now
 
 => 
