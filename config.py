@@ -284,19 +284,19 @@ games = OrderedDict([
         inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-stoatsoup/",
         ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
         socket_path = "%%CHROOT_WEBDIR%%/sockets")),
-#    ("dcss-two-state-vampire", dict(
-#        name = "two-state-vampire",
-#        crawl_binary = "/bin/crawl-stable-launcher.sh",
-#        separator = "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>experimental:</span>&nbsp;",
-#        send_json_options = True,
-#        pre_options  = [ "two-state-vampire" ],
-#        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-git/",
-#        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-git/",
-#        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
-#        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
-#        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-two-state-vampire/",
-#        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
-#        socket_path = "%%CHROOT_WEBDIR%%/sockets")),
+    ("dcss-positional-magic", dict(
+        name = "positional-magic",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        separator = "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>experimental:</span>&nbsp;",
+        send_json_options = True,
+        pre_options  = [ "positional-magic" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-git/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-git/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%WEB_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-positional-magic/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets")),
 ])
 
 dgl_status_file = "%%CHROOT_WEBDIR%%/run/status"
