@@ -12,7 +12,7 @@ Advanced options
 Select the experimental version you wish to backup
 (for bug reports and debugging)
 
-P) positional-magic
+
 
 q) Return to previous menu
 
