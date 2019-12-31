@@ -29,6 +29,8 @@ ifnxcp %%CHROOT_DGLDIR%%/data/crawl-git-settings/init.txt %%CHROOT_RCFILESDIR%%/
 ifnxcp %%CHROOT_DGLDIR%%/data/crawl-git.macro %%CHROOT_RCFILESDIR%%/crawl-gooncrawl/"$NAME".macro
 ifnxcp %%CHROOT_DGLDIR%%/data/crawl-git-settings/init.txt %%CHROOT_RCFILESDIR%%/crawl-stoatsoup/"$NAME".rc
 ifnxcp %%CHROOT_DGLDIR%%/data/crawl-git.macro %%CHROOT_RCFILESDIR%%/crawl-stoatsoup/"$NAME".macro
+ifnxcp %%CHROOT_DGLDIR%%/data/crawl-git-settings/init.txt %%CHROOT_RCFILESDIR%%/crawl-bloatcrawl2/"$NAME".rc
+ifnxcp %%CHROOT_DGLDIR%%/data/crawl-git.macro %%CHROOT_RCFILESDIR%%/crawl-bloatcrawl2/"$NAME".macro
 
 mkdir -p %%CHROOT_MORGUEDIR%%/"$NAME"
 mkdir -p %%CHROOT_TTYRECDIR%%/"$NAME"

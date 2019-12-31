@@ -6,7 +6,7 @@ VERSION=${1:-0.24}
 # regexp works with both.
 # put experimentals in VERS_RE
 VERS_RE='^[0-9]+.[0-9]+$'
-FORK_RE='^hellcrawl$|^bcrawl$|^bcadrencrawl$|^gooncrawl$|^stoatsoup$'
+FORK_RE='^hellcrawl$|^bcrawl$|^bcadrencrawl$|^gooncrawl$|^stoatsoup$|^bloatcrawl2$'
 #if [[ ! $VERSION =~ $VERS_RE ]]; then
 if ! { [[ $VERSION =~ $VERS_RE ]] || [[ $VERSION =~ $FORK_RE ]]; }; then
     echo "Bad crawl version $VERSION"

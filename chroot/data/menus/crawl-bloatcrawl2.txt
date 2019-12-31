@@ -5,15 +5,19 @@ Crawl information:  http://crawl.develz.org/
 ------------------------------------------------------------------------------
 ** Games on this server are recorded for in-progress viewing and playback! **
 ------------------------------------------------------------------------------
+
 Logged in as: $USERNAME
 
-WARNING: Forks are not developed or tested by the Crawl development team.
-Updates to forks may cause the loss of existing games.
+Game selected: bloatcrawl2
 
-H) Hellcrawl     S) StoatSoup
-B) bcrawl        L) bloatcrawl2
-C) BcadrenCrawl
-G) Gooncrawl
+P)lay bloatcrawl2
 
-q) Return to trunk menu
+o) Edit options
+m) Edit macros
+
+
+A)dvanced options
+
+q) Return to main menu
+
 => 
