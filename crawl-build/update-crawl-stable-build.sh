@@ -5,7 +5,7 @@ VERSION=${1:-0.25}
 # Quoting for =~ changed from bash 3.0 to 3.2; using a variable for the
 # regexp works with both.
 # put experimentals in VERS_RE
-VERS_RE='^[0-9]+.[0-9]+$|^delpal$'
+VERS_RE='^[0-9]+.[0-9]+$|^kobold-nightstalker$'
 FORK_RE='^hellcrawl$|^bcrawl$|^bcadrencrawl$|^gooncrawl$|^stoatsoup$|^bloatcrawl2$'
 #if [[ ! $VERSION =~ $VERS_RE ]]; then
 if ! { [[ $VERSION =~ $VERS_RE ]] || [[ $VERSION =~ $FORK_RE ]]; }; then
