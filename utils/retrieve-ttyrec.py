@@ -154,7 +154,11 @@ def do_work():
             httpcode = file.getcode()
 
             if httpcode == 200:
-                print "Content-type: application/octet-stream"
+                if filename.endswith(".gz"):
+                    print "Content-encoding: gzip"
+                    print "Content-type: text/plain; charset=utf-8"
+                else:
+                    print "Content-type: application/octet-stream"
                 print
                 sys.stdout.write(file.read())
                 sys.stdout.flush()
